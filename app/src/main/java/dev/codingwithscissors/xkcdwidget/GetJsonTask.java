@@ -3,16 +3,15 @@
  * This code is licensed under MIT license (see LICENSE.txt for details)
  */
 
-package me.sandrin.xkcdwidget;
+package dev.codingwithscissors.xkcdwidget;
 
 import android.os.AsyncTask;
 import android.util.Log;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import cz.msebera.android.httpclient.HttpEntity;
+import cz.msebera.android.httpclient.HttpResponse;
+import cz.msebera.android.httpclient.client.HttpClient;
+import cz.msebera.android.httpclient.client.methods.HttpGet;
+import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -3,7 +3,7 @@
  * This code is licensed under MIT license (see LICENSE.txt for details)
  */
 
-package me.sandrin.xkcdwidget;
+package dev.codingwithscissors.xkcdwidget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -103,6 +103,7 @@ public class XKCDAppWidgetProvider extends AppWidgetProvider {
         }
     }
 
+    @SuppressWarnings("UnspecifiedImmutableFlag")
     private void updateRemoteViews(Context context, RemoteViews views) {
         if(title != null) {
             views.setTextViewText(R.id.title, title);

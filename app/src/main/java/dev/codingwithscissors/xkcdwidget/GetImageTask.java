@@ -3,7 +3,7 @@
  * This code is licensed under MIT license (see LICENSE.txt for details)
  */
 
-package me.sandrin.xkcdwidget;
+package dev.codingwithscissors.xkcdwidget;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -1,13 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google() // For Gradle 4.0+
+        maven { url 'https://maven.google.com' } // For Gradle < 4.0
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.6.0'
+
+    }
+}
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    packagingOptions { resources.excludes.add("META-INF/*") }
+    compileSdkVersion 35
+    buildToolsVersion "35.0.0"
+    namespace "dev.codingwithscissors.xkcdwidget"
 
     defaultConfig {
-        applicationId "me.sandrin.xkcdwidget"
-        minSdkVersion 14
-        targetSdkVersion 21
+        applicationId "dev.codingwithscissors.xkcdwidget"
+        minSdkVersion 21
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
     }
@@ -19,7 +33,13 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'cz.msebera.android:httpclient:4.5.8'
 }
